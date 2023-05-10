@@ -1,0 +1,122 @@
+.slider-container{
+    background-image: url(../images/sliderbg.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -356px;
+    //height: 65vh;
+    @include responsive(996px, 1280px){
+        background-position: 0px;
+    }
+    @include responsive(769px, 996px){
+        background-position: 0px 50%;
+        margin-bottom: 80px;
+    }
+    @include responsive(480px, 768px){
+        height: 615px;
+        background-position: 0px;
+        background-size: auto;
+    }
+    @include smartphone(480px){
+        height: 615px;
+        background-size: auto;
+        background-position: -90px -442px;
+    }
+     
+}
+
+.testimony_container {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+       
+}
+.swiper {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 80px;
+}
+.swiper-slide{
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+        @include responsive(769px, 996px){
+            grid-template-columns: 1fr 400px; 
+            
+        }        
+        @include responsive(480px, 768px){
+            grid-template-columns: 1fr; 
+            grid-template-rows: 1fr 1fr;
+        }
+        @include smartphone(480px){
+            grid-template-columns: 1fr; 
+            grid-template-rows: 1fr 1fr;
+        }
+}
+
+
+
+
+.skill_title {
+    text-align: center;
+    font-size: 4em;
+    color: #fff;
+
+        &--show {
+        text-align: center;
+        font-size: 4em;
+        color: #000;
+        }
+        &:hover {
+        font-size: 4.1em;
+        transition: font-size 1s;
+        }
+}
+
+
+
+      
+.slider_paragraph{
+    font-size: 2rem;
+    font-weight: 600;
+    max-width: 500px;
+    margin: auto;
+
+        &--show {
+        color: #fff !important;
+        font-size: 2rem;
+        max-width: 500px;
+        margin: auto;
+        font-weight: 600;
+        }
+        
+       
+}
+
+.slider_title{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600; 
+
+        &--show {
+        color: #fff !important;
+        font-size: 40px;
+        font-weight: 600;
+        }
+}
+
+.img_container{
+    margin: auto;
+    width: 250px;
+    @include responsive(480px, 768px){
+        grid-row: 1/2;
+    }
+    @include smartphone(480px){
+        grid-row: 1/2;    
+    }
+    
+      
+}
+

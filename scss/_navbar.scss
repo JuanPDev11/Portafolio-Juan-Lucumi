@@ -1,0 +1,229 @@
+.header_container{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #fff;
+    &::before{
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/bgheader.jpeg');
+        background-color: #000;
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+        z-index: -1;
+
+    }
+} 
+.navbar-fixed-top {
+    max-width: 50px;
+    cursor: pointer;
+
+}
+.icon_black{
+    color: #000;
+    cursor: pointer;
+    opacity: 0;
+}
+.dark{
+    color: #fff;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.nav_container{
+    padding: 10px; 
+    display: flex;
+    align-items: flex-start;
+}
+ 
+.nav_items {
+    font-size: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    padding-top: 10px;
+    font-weight: 600;
+    gap: 2em;
+    margin-left: auto;
+    margin-right: 366px;
+
+    @include responsive(769px, 996px){
+        @include menuSettings();
+    }
+   
+    @include responsive(480px, 768px){
+        @include menuSettings();      
+    }
+    @include smartphone(480px){
+        @include menuSettings();
+    }
+}
+.--opnavbar{
+    opacity: 1;
+    pointer-events: unset;
+    transition: all 1s;
+}
+.--opmenu{
+    opacity: 0;
+}
+.nav_item{
+    list-style: none;
+    border: 1px solid #fff;
+    padding: 4px;
+    border-radius: 10px;
+}
+a {
+    color: #fff; 
+    &:hover{
+        color: #fff;
+        text-decoration: underline;
+        
+    }
+}
+#button_theme {
+    top: 20px;
+    left: 30px;
+    font-size: 36px;
+}
+.title_dev{
+    font-size: 30px; 
+    margin: 0px;
+    @include responsive(768px, 1024px){
+        font-size: 20px;
+    }
+    @include smartphone(480px){
+        font-size: 20px;    
+    }
+}
+
+
+.buttons-event {
+    margin-left: auto;
+    font-size: 20px;
+    padding: 10px;
+    opacity: 0;
+    @include responsive(769px, 996px){
+        opacity: 1;
+        cursor: pointer;
+    }
+    @include responsive(480px, 768px){
+        opacity: 1;
+        cursor: pointer;
+    }
+    @include smartphone(480px){
+        opacity: 1;
+        cursor: pointer;    
+    }
+}
+.buttons-close{
+    margin-left: auto;
+    font-size: 20px;
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+ }
+.close-op{
+    opacity: 1;
+    cursor: pointer;
+}
+.menu-op{
+    opacity: 0;
+}
+
+
+/*HERO CONATINER*/
+.hero_container {
+    padding: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 1em;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    align-content: center;
+    text-align: end;
+}
+.hero_title {
+    font-size: 5em;
+    text-align: end;
+    padding-bottom: 10px;
+    transition: font-size 1s;
+
+        &:hover{
+        font-size: 5.3em;
+        transition: font-size .5s ;
+        }
+        @include responsive(996px, 1280px){
+        font-size: 5rem;
+        padding-top: 65px;
+            &:hover{
+            font-size: 5.2rem;
+            }
+        }
+        @include responsive(768px, 996px){
+        font-size: 4rem;
+        padding-top: 65px;
+            &:hover{
+            font-size: 4.2rem;
+            }
+        }
+        @include responsive(480px, 768px){
+        font-size: 2em;
+        text-align: center;
+        padding-top: 50px;
+            &:hover{
+              font-size: 2.2em;
+            }
+        }
+        @include smartphone(480px){
+        font-size: 2em;
+        text-align: center;
+        padding-top: 40px;
+            &:hover{
+              font-size: 2.2em;      
+            }    
+        }
+        
+} 
+p.hero_paragraph {
+    font-size: 17px;
+    text-align: end;
+    padding-bottom: 50px;
+    @include responsive(480px, 768px){
+        font-size: 21x;
+        text-align: center;
+    }
+    @include smartphone(480px){
+        font-size: 20px;
+        text-align: center; 
+        padding: 0px;     
+    }
+}
+section.col-sm-12 {
+    padding: 0;
+}
+
+.sticker_more{
+    display: inline-block;
+    max-width: 109px;
+    text-align: start;
+    margin-top: 70px;
+    margin-left: 200px;
+    opacity: 0;
+
+} 
+.--more{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+
+
