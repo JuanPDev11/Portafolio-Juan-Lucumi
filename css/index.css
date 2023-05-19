@@ -1,10 +1,5 @@
 /*MIXINS*/
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
-a {
-  color: #fff !important; }
-  a:hover {
-    color: #fff !important; }
-
 body {
   font-family: 'Special Elite', cursive !important;
   /*background: linear-gradient(181deg, rgb(3, 2, 4) 90%, rgb(139, 102, 241) 97%);*/
@@ -288,6 +283,65 @@ section.col-sm-12 {
 .--more {
   opacity: 1;
   transition: opacity 1s; }
+
+/*PROYECTS*/
+.proyects-flip-card {
+  margin: 0 auto 180px;
+  width: 300px;
+  height: 400px;
+  perspective: 2000px; }
+  .proyects-flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 28px;
+    transition: all 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
+    transform-style: preserve-3d;
+    background: rgba(255, 255, 255, 0.3); }
+  .proyects-flip-card-front, .proyects-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    backface-visibility: hidden; }
+  .proyects-flip-card-front {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding: 40px; }
+  .proyects-flip-card-back {
+    font-size: 1.25rem;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding: 32px;
+    background-color: #B1CFC8;
+    transform: rotateY(180deg); }
+  .proyects-flip-card:hover .proyects-flip-card-inner {
+    transform: rotateY(-180deg); }
+
+.proyects {
+  text-align: center;
+  margin: 70px 0; }
+  .proyects-title {
+    font-size: 4em;
+    color: #fff;
+    margin: 70px 0; }
+  .proyects-title-card {
+    color: #FFF; }
+  .proyects-title-back {
+    color: #000; }
+  .proyects-title-back:hover {
+    color: #000; }
+  .proyects-container {
+    display: flex; }
+  .proyects-paragraph {
+    color: #000; }
+
+@media screen and (max-width: 997px) {
+  .proyects-container {
+    flex-direction: column; } }
 
 /*SLIDER*/
 .slider-container {
