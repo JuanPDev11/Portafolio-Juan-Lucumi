@@ -343,6 +343,9 @@ section.col-sm-12 {
   .proyects-container {
     flex-direction: column; } }
 
+.python-logo {
+  width: 220px; }
+
 /*SLIDER*/
 .slider-container {
   background-image: url(../images/sliderbg.png);
