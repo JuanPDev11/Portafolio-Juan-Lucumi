@@ -441,6 +441,9 @@ section.col-sm-12 {
     .img_container {
       grid-row: 1/2; } }
 
+.logo-container {
+  width: 250px; }
+
 /*CARDS*/
 .cards_container {
   display: grid;
